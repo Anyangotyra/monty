@@ -1,20 +1,21 @@
 #include "monty.h"
-
 /**
- * pall - Prints all elements of the stack.
- * @stack: A pointer to the top of the stack.
- * @line_number: The line number in the Monty bytecode file.
- *
- * Description:
- * The pall function prints all the elements of the stack starting
- * from the top. It does not modify the stack itself. If the stack is
- * empty, nothing is printed.
- *
- * @stack: A pointer to the top of the stack.
- * @line_number: The line number in the Monty bytecode file where
- * the pall operation is executed.
- */
-void pall(stack_t **stack, unsigned int line_number)
+ * f_pall - prints the stack
+ * @head: stack head
+ * @counter: no used
+ * Return: no return
+*/
+void f_pall(stack_t **head, unsigned int counter)
 {
-	/* Implementation of pall goes here */
+	stack_t *h;
+	(void)counter;
+
+	h = *head;
+	if (h == NULL)
+		return;
+	while (h)
+	{
+		printf("%d\n", h->n);
+		h = h->next;
+	}
 }
